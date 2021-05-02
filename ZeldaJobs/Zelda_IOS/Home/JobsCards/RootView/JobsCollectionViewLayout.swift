@@ -21,7 +21,7 @@ class JobsCollectionViewlayout : UICollectionViewLayout {
             height: itemHeight)
     }
     
-    lazy var offestPerItem = (collectionViewContentSize.width - itemWidth*2) / CGFloat(collectionView!.numberOfItems(inSection: 0))
+    private lazy var offestPerItem = (collectionViewContentSize.width - itemWidth*2) / CGFloat(collectionView!.numberOfItems(inSection: 0))
     override func prepare() {
         super.prepare()
         attributes.removeAll()
@@ -41,24 +41,24 @@ class JobsCollectionViewlayout : UICollectionViewLayout {
         }
     }
     
-    func createAttributeForIndex(item : Int)->UICollectionViewLayoutAttributes {
+   private  func createAttributeForIndex(item : Int)->UICollectionViewLayoutAttributes {
         let indexPath = IndexPath(item: item, section: 0)
         let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         return attribute
     }
-    func configCollectionViewForFirstLoad(){
-        collectionView?.decelerationRate = .fast
-        collectionView?.setContentOffset(.init(x:attributes[1].center.x , y:0), animated: false )
+     func configCollectionViewForFirstLoad(){
+        collectionView!.decelerationRate = .fast
+        collectionView!.setContentOffset(.init(x:attributes[1].center.x , y:0), animated: false )
     }
     
-    func getScaleValue( index : Int)->CGFloat{
+   private  func getScaleValue( index : Int)->CGFloat{
         let currentItemOffset =  CGFloat(index) * offestPerItem
         let centerOfViewOffset = (collectionView!.bounds.width / 2) - (itemWidth / 2) + collectionView!.contentOffset.x - itemWidth
         let currentRatio =  abs(currentItemOffset - centerOfViewOffset) / 1000
          return abs(1 - currentRatio)
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         true
     }
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {

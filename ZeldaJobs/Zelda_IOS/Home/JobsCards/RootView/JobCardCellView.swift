@@ -113,10 +113,7 @@ class JobCardCellView : UICollectionViewCell {
         contentView.layer.cornerCurve = .continuous
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-       
-    }
+    
     
 }
 

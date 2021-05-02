@@ -11,7 +11,19 @@ import SwiftUI
 struct ZeldaJobsApp: App {
     var body: some Scene {
         WindowGroup {
-            fakeViewControllerJobs()
+            ZeldaTabbarAddItem()
         }
     }
+}
+
+
+
+struct X : PreviewProvider {
+    static var previews: some View {
+        ZeldaTabbarAddItem()
+            .previewLayout(.fixed(width: 200.0, height: 200.0))
+        
+    }
+    
+    
 }

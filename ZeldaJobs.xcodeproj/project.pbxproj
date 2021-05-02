@@ -9,25 +9,33 @@
 /* Begin PBXBuildFile section */
 		9F567AB8263A27940059FF4C /* JobsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F567AB7263A27940059FF4C /* JobsCollectionViewLayout.swift */; };
 		9F73D9CE262F69C60041229E /* ZeldaJobsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73D9CD262F69C60041229E /* ZeldaJobsApp.swift */; };
-		9F73D9D0262F69C60041229E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73D9CF262F69C60041229E /* ContentView.swift */; };
+		9F73D9D0262F69C60041229E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73D9CF262F69C60041229E /* Home.swift */; };
 		9F73D9D2262F69C80041229E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F73D9D1262F69C80041229E /* Assets.xcassets */; };
 		9F73D9D5262F69C80041229E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F73D9D4262F69C80041229E /* Preview Assets.xcassets */; };
+		9F7C5226263E1B89000600BF /* BounceCirclesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C5225263E1B89000600BF /* BounceCirclesAnimation.swift */; };
 		9FA35D6D263981E600FCC938 /* JobCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA35D6C263981E600FCC938 /* JobCardCellView.swift */; };
 		9FA35D71263984AB00FCC938 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA35D70263984AB00FCC938 /* UIFont.swift */; };
 		9FA35D7426398D4B00FCC938 /* JobsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA35D7326398D4B00FCC938 /* JobsCollectionView.swift */; };
+		9FBD404C263DB1D00041AA60 /* ZeldaTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD404B263DB1D00041AA60 /* ZeldaTabbar.swift */; };
+		9FBD4050263DB7B20041AA60 /* ZeldaTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD404F263DB7B20041AA60 /* ZeldaTabbarItem.swift */; };
+		9FBD4053263DE5760041AA60 /* ZeldaTabbarAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD4052263DE5760041AA60 /* ZeldaTabbarAddItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F567AB7263A27940059FF4C /* JobsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		9F73D9CA262F69C60041229E /* ZeldaJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeldaJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73D9CD262F69C60041229E /* ZeldaJobsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaJobsApp.swift; sourceTree = "<group>"; };
-		9F73D9CF262F69C60041229E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F73D9CF262F69C60041229E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		9F73D9D1262F69C80041229E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F73D9D4262F69C80041229E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F73D9D6262F69C80041229E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7C5225263E1B89000600BF /* BounceCirclesAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceCirclesAnimation.swift; sourceTree = "<group>"; };
 		9FA35D6C263981E600FCC938 /* JobCardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardCellView.swift; sourceTree = "<group>"; };
 		9FA35D70263984AB00FCC938 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		9FA35D7326398D4B00FCC938 /* JobsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionView.swift; sourceTree = "<group>"; };
+		9FBD404B263DB1D00041AA60 /* ZeldaTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbar.swift; sourceTree = "<group>"; };
+		9FBD404F263DB7B20041AA60 /* ZeldaTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbarItem.swift; sourceTree = "<group>"; };
+		9FBD4052263DE5760041AA60 /* ZeldaTabbarAddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbarAddItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				9F73D9CD262F69C60041229E /* ZeldaJobsApp.swift */,
-				9F73D9CF262F69C60041229E /* ContentView.swift */,
-				9FA35D6C263981E600FCC938 /* JobCardCellView.swift */,
-				9FA35D7326398D4B00FCC938 /* JobsCollectionView.swift */,
-				9F567AB7263A27940059FF4C /* JobsCollectionViewLayout.swift */,
+				9FBD4041263DB08F0041AA60 /* Zelda_IOS */,
+				9FBD4042263DB0A50041AA60 /* Zelda_SwiftUI */,
+				9FBD4043263DB0B60041AA60 /* Zelda_Kit */,
 				9FA35D6F263984A000FCC938 /* Helpers */,
 				9F73D9D1262F69C80041229E /* Assets.xcassets */,
 				9F73D9D6262F69C80041229E /* Info.plist */,
@@ -87,6 +94,67 @@
 				9FA35D70263984AB00FCC938 /* UIFont.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9FBD403F263DB05D0041AA60 /* JobsCards */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD4045263DB16C0041AA60 /* RootView */,
+			);
+			path = JobsCards;
+			sourceTree = "<group>";
+		};
+		9FBD4041263DB08F0041AA60 /* Zelda_IOS */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD4049263DB1980041AA60 /* Home */,
+			);
+			path = Zelda_IOS;
+			sourceTree = "<group>";
+		};
+		9FBD4042263DB0A50041AA60 /* Zelda_SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Zelda_SwiftUI;
+			sourceTree = "<group>";
+		};
+		9FBD4043263DB0B60041AA60 /* Zelda_Kit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Zelda_Kit;
+			sourceTree = "<group>";
+		};
+		9FBD4045263DB16C0041AA60 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				9FA35D6C263981E600FCC938 /* JobCardCellView.swift */,
+				9FA35D7326398D4B00FCC938 /* JobsCollectionView.swift */,
+				9F567AB7263A27940059FF4C /* JobsCollectionViewLayout.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		9FBD4049263DB1980041AA60 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F73D9CF262F69C60041229E /* Home.swift */,
+				9FBD404A263DB1BA0041AA60 /* Tabbar */,
+				9FBD403F263DB05D0041AA60 /* JobsCards */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9FBD404A263DB1BA0041AA60 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD404B263DB1D00041AA60 /* ZeldaTabbar.swift */,
+				9FBD404F263DB7B20041AA60 /* ZeldaTabbarItem.swift */,
+				9FBD4052263DE5760041AA60 /* ZeldaTabbarAddItem.swift */,
+				9F7C5225263E1B89000600BF /* BounceCirclesAnimation.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,11 +227,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA35D71263984AB00FCC938 /* UIFont.swift in Sources */,
-				9F73D9D0262F69C60041229E /* ContentView.swift in Sources */,
+				9F73D9D0262F69C60041229E /* Home.swift in Sources */,
+				9F7C5226263E1B89000600BF /* BounceCirclesAnimation.swift in Sources */,
 				9F567AB8263A27940059FF4C /* JobsCollectionViewLayout.swift in Sources */,
+				9FBD4050263DB7B20041AA60 /* ZeldaTabbarItem.swift in Sources */,
 				9FA35D7426398D4B00FCC938 /* JobsCollectionView.swift in Sources */,
 				9FA35D6D263981E600FCC938 /* JobCardCellView.swift in Sources */,
 				9F73D9CE262F69C60041229E /* ZeldaJobsApp.swift in Sources */,
+				9FBD404C263DB1D00041AA60 /* ZeldaTabbar.swift in Sources */,
+				9FBD4053263DE5760041AA60 /* ZeldaTabbarAddItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

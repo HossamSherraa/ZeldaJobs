@@ -25,7 +25,7 @@ class JobsCollectionView : UIViewController , UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = UIColor.clear
         collectionView.register(JobCardCellView.self, forCellWithReuseIdentifier: "Cell")
         collectionView.dataSource = self
     }
@@ -38,7 +38,8 @@ final class fakeViewControllerJobs : UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: JobsCollectionView, context: Context) {
-        print("WOW")
+        
+        
     }
     
     typealias UIViewControllerType = JobsCollectionView
