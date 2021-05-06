@@ -19,6 +19,9 @@
 		9FBD404C263DB1D00041AA60 /* ZeldaTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD404B263DB1D00041AA60 /* ZeldaTabbar.swift */; };
 		9FBD4050263DB7B20041AA60 /* ZeldaTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD404F263DB7B20041AA60 /* ZeldaTabbarItem.swift */; };
 		9FBD4053263DE5760041AA60 /* ZeldaTabbarAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD4052263DE5760041AA60 /* ZeldaTabbarAddItem.swift */; };
+		9FBEE86E263F268F001A2DE3 /* SpeechRecognizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEE86D263F268F001A2DE3 /* SpeechRecognizerView.swift */; };
+		9FBEE872263F2CFA001A2DE3 /* RangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEE871263F2CFA001A2DE3 /* RangeView.swift */; };
+		9FC5CD87263F4F9F002C2D6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5CD86263F4F9F002C2D6B /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9FBD404B263DB1D00041AA60 /* ZeldaTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbar.swift; sourceTree = "<group>"; };
 		9FBD404F263DB7B20041AA60 /* ZeldaTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbarItem.swift; sourceTree = "<group>"; };
 		9FBD4052263DE5760041AA60 /* ZeldaTabbarAddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaTabbarAddItem.swift; sourceTree = "<group>"; };
+		9FBEE86D263F268F001A2DE3 /* SpeechRecognizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerView.swift; sourceTree = "<group>"; };
+		9FBEE871263F2CFA001A2DE3 /* RangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeView.swift; sourceTree = "<group>"; };
+		9FC5CD86263F4F9F002C2D6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				9F73D9CF262F69C60041229E /* Home.swift */,
+				9FC5CD85263F4F7C002C2D6B /* Map */,
+				9FBEE870263F2CD2001A2DE3 /* Range */,
+				9FBEE86C263F266B001A2DE3 /* SpeechRecognizer */,
 				9FBD404A263DB1BA0041AA60 /* Tabbar */,
 				9FBD403F263DB05D0041AA60 /* JobsCards */,
 			);
@@ -155,6 +164,30 @@
 				9F7C5225263E1B89000600BF /* BounceCirclesAnimation.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		9FBEE86C263F266B001A2DE3 /* SpeechRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				9FBEE86D263F268F001A2DE3 /* SpeechRecognizerView.swift */,
+			);
+			path = SpeechRecognizer;
+			sourceTree = "<group>";
+		};
+		9FBEE870263F2CD2001A2DE3 /* Range */ = {
+			isa = PBXGroup;
+			children = (
+				9FBEE871263F2CFA001A2DE3 /* RangeView.swift */,
+			);
+			path = Range;
+			sourceTree = "<group>";
+		};
+		9FC5CD85263F4F7C002C2D6B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5CD86263F4F9F002C2D6B /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,11 +263,14 @@
 				9F73D9D0262F69C60041229E /* Home.swift in Sources */,
 				9F7C5226263E1B89000600BF /* BounceCirclesAnimation.swift in Sources */,
 				9F567AB8263A27940059FF4C /* JobsCollectionViewLayout.swift in Sources */,
+				9FC5CD87263F4F9F002C2D6B /* MapView.swift in Sources */,
 				9FBD4050263DB7B20041AA60 /* ZeldaTabbarItem.swift in Sources */,
 				9FA35D7426398D4B00FCC938 /* JobsCollectionView.swift in Sources */,
 				9FA35D6D263981E600FCC938 /* JobCardCellView.swift in Sources */,
+				9FBEE86E263F268F001A2DE3 /* SpeechRecognizerView.swift in Sources */,
 				9F73D9CE262F69C60041229E /* ZeldaJobsApp.swift in Sources */,
 				9FBD404C263DB1D00041AA60 /* ZeldaTabbar.swift in Sources */,
+				9FBEE872263F2CFA001A2DE3 /* RangeView.swift in Sources */,
 				9FBD4053263DE5760041AA60 /* ZeldaTabbarAddItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

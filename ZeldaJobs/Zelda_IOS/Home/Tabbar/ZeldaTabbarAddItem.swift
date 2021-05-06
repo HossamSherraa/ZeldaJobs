@@ -12,7 +12,7 @@ struct ZeldaTabbarAddItem : View {
         Color.gray
             .modifier(BounceAnimation(prc: prc))
             .onAppear(perform: {
-                withAnimation(Animation.linear(duration: 0.8).repeatForever(autoreverses: false)) {
+                withAnimation(Animation.linear(duration: 3.8).repeatForever(autoreverses: false)) {
                     prc = 1
                 }
             })

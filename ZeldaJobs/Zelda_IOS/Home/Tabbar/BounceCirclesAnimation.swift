@@ -11,8 +11,8 @@ struct BounceAnimation : AnimatableModifier {
     
    var prc: CGFloat
    typealias AnimatableData = CGFloat
-    let alpha : Double = 0.127
-    let color : Color = Color.blue
+    let alpha : Double = 0.1
+    let color : Color = Color.gray
     var animatableData: CGFloat {
         get {return prc}
         set {prc = newValue}
@@ -28,11 +28,7 @@ struct BounceAnimation : AnimatableModifier {
             Circle()
                 .fill(color)
                 .opacity(alpha)
-                .scaleEffect(0.7 + (0.3 * prc))
-            Circle()
-                .fill(color)
-                .opacity(alpha)
-                .scaleEffect(0.4 + (0.3 * prc))
+                .scaleEffect(0.4 + (0.6 * prc))
             Circle()
                 .fill(color)
                 .opacity(Double(prc) * alpha)

@@ -109,7 +109,7 @@ class JobCardCellView : UICollectionViewCell {
         contentView.layer.addSublayer(gradientLayer)
         
         contentView.layer.masksToBounds = true
-        contentView.layer.cornerRadius = 25
+        contentView.layer.cornerRadius = 55
         contentView.layer.cornerCurve = .continuous
     }
     

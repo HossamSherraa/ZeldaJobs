@@ -38,7 +38,7 @@ final class fakeViewControllerJobs : UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: JobsCollectionView, context: Context) {
-        
+        uiViewController.collectionView.reloadData()
         
     }
     
