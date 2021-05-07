@@ -22,6 +22,7 @@
 		9FBEE86E263F268F001A2DE3 /* SpeechRecognizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEE86D263F268F001A2DE3 /* SpeechRecognizerView.swift */; };
 		9FBEE872263F2CFA001A2DE3 /* RangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEE871263F2CFA001A2DE3 /* RangeView.swift */; };
 		9FC5CD87263F4F9F002C2D6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5CD86263F4F9F002C2D6B /* MapView.swift */; };
+		9FFBE51F26450ACC00C2B6D6 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE51E26450ACC00C2B6D6 /* FlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9FBEE86D263F268F001A2DE3 /* SpeechRecognizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerView.swift; sourceTree = "<group>"; };
 		9FBEE871263F2CFA001A2DE3 /* RangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeView.swift; sourceTree = "<group>"; };
 		9FC5CD86263F4F9F002C2D6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9FFBE51E26450ACC00C2B6D6 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				9FA35D6C263981E600FCC938 /* JobCardCellView.swift */,
 				9FA35D7326398D4B00FCC938 /* JobsCollectionView.swift */,
 				9F567AB7263A27940059FF4C /* JobsCollectionViewLayout.swift */,
+				9FFBE51E26450ACC00C2B6D6 /* FlowLayout.swift */,
 			);
 			path = RootView;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				9F7C5226263E1B89000600BF /* BounceCirclesAnimation.swift in Sources */,
 				9F567AB8263A27940059FF4C /* JobsCollectionViewLayout.swift in Sources */,
 				9FC5CD87263F4F9F002C2D6B /* MapView.swift in Sources */,
+				9FFBE51F26450ACC00C2B6D6 /* FlowLayout.swift in Sources */,
 				9FBD4050263DB7B20041AA60 /* ZeldaTabbarItem.swift in Sources */,
 				9FA35D7426398D4B00FCC938 /* JobsCollectionView.swift in Sources */,
 				9FA35D6D263981E600FCC938 /* JobCardCellView.swift in Sources */,

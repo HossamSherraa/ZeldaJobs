@@ -7,9 +7,11 @@
 
 import UIKit
 import SwiftUI
+
+
 class JobsCollectionView : UIViewController , UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        90
+        10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -13,6 +13,7 @@ class JobCardCellView : UICollectionViewCell {
         super.init(frame: frame)
         configContainerViewStyle()
         buildViewHeirarchy()
+        buildViewConstraints()
        
     }
     
@@ -77,28 +78,48 @@ class JobCardCellView : UICollectionViewCell {
         return label
     }()
     
-    func buildViewHeirarchy(){
-        let containerStack = UIStackView(arrangedSubviews: [logoView , companyTitle , jobTitle])
-        containerStack.translatesAutoresizingMaskIntoConstraints = false
-        containerStack.axis = .vertical
-        containerStack.distribution = .equalSpacing
-        containerStack.alignment = .center
+        lazy var  componentContainer : UIView  = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.backgroundColor = .red
+            return view
+        }()
+    lazy var containerStack : UIStackView = {
+       let stack =  UIStackView(arrangedSubviews: [logoView , companyTitle , jobTitle])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.distribution = .equalSpacing
+        stack.alignment = .center
+        return stack
+    }()
+    func buildViewConstraints(){
+       
         
-        contentView.addSubview(containerStack)
-        contentView.addSubview(salaryTitle)
+        
         
         NSLayoutConstraint.activate([
-            containerStack.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            containerStack.heightAnchor.constraint(equalTo: contentView.heightAnchor , multiplier: 0.5),
-            containerStack.topAnchor.constraint(equalTo: contentView.topAnchor , constant: 30),
-            containerStack.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            componentContainer.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.60),
+            componentContainer.heightAnchor.constraint(equalTo: contentView.heightAnchor),
+            componentContainer.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            componentContainer.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            contentView.bottomAnchor.constraint(equalTo: salaryTitle.bottomAnchor, constant: 30),
-            contentView.centerXAnchor.constraint(equalTo: salaryTitle.centerXAnchor)
+            
+            containerStack.widthAnchor.constraint(equalTo: componentContainer.widthAnchor , multiplier: 1),
+            containerStack.heightAnchor.constraint(equalTo: componentContainer.heightAnchor , multiplier: 0.5),
+            containerStack.topAnchor.constraint(equalTo: componentContainer.topAnchor , constant: 30),
+            containerStack.centerXAnchor.constraint(equalTo: componentContainer.centerXAnchor),
+            componentContainer.bottomAnchor.constraint(equalTo: salaryTitle.bottomAnchor, constant: 30),
+            componentContainer.centerXAnchor.constraint(equalTo: salaryTitle.centerXAnchor)
         ])
         
     }
     
+    func buildViewHeirarchy(){
+        contentView.addSubview(componentContainer)
+        componentContainer.addSubview(containerStack)
+        componentContainer.addSubview(salaryTitle)
+        
+    }
     func configContainerViewStyle(){
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = contentView.bounds
@@ -106,11 +127,11 @@ class JobCardCellView : UICollectionViewCell {
         gradientLayer.colors = [#colorLiteral(red: 0.04705882353, green: 0.04705882353, blue: 0.04705882353, alpha: 1).cgColor , #colorLiteral(red: 0.168627451, green: 0.168627451, blue: 0.168627451, alpha: 1).cgColor]
         gradientLayer.startPoint = .init(x: 0.5, y: 1)
         gradientLayer.endPoint = .init(x: 0.5, y: 0)
-        contentView.layer.addSublayer(gradientLayer)
+        componentContainer.layer.addSublayer(gradientLayer)
         
-        contentView.layer.masksToBounds = true
-        contentView.layer.cornerRadius = 55
-        contentView.layer.cornerCurve = .continuous
+        componentContainer.layer.masksToBounds = true
+        componentContainer.layer.cornerRadius = 55
+        componentContainer.layer.cornerCurve = .continuous
     }
     
     

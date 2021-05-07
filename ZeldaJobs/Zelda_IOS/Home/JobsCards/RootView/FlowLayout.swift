@@ -1,15 +1,16 @@
 //
-//  JobsCollectionViewLayout.swift
+//  FlowLayout.swift
 //  ZeldaJobs
 //
-//  Created by Hossam on 29/04/2021.
+//  Created by Hossam on 07/05/2021.
 //
 
+
 import UIKit
-class JobsCollectionViewlayout : UICollectionViewFlowLayout {
+class Flowlayout : UICollectionViewFlowLayout {
     private var attributes : [UICollectionViewLayoutAttributes] = []
     private var contentSize : CGSize = .zero
-    private lazy var itemWidth : CGFloat = collectionView!.bounds.width
+    private let itemWidth : CGFloat = 231
     private let itemHeight : CGFloat = 309
     private let spacing: CGFloat = 0
     private let leadingSafeArea : CGFloat = 0
@@ -17,24 +18,22 @@ class JobsCollectionViewlayout : UICollectionViewFlowLayout {
    
     override var collectionViewContentSize: CGSize {
         return .init(
-            width: (itemWidth + spacing) * CGFloat(collectionView!.numberOfItems(inSection: 0)) ,
+            width: (itemWidth + spacing) * CGFloat(collectionView!.numberOfItems(inSection: 0)) + leadingSafeArea*2  ,
             height: itemHeight)
     }
     
     
     override func prepare() {
         super.prepare()
-       
         attributes.removeAll()
         
         var xValue : CGFloat = 0
         for item in 0..<collectionView!.numberOfItems(inSection: 0) {
             let attribute = createAttributeForIndex(item: item)
             let scaleValue = getScaleValue( index: item)
-            
-            let frame = CGRect.init(x: xValue, y: 0, width: itemWidth + spacing, height: itemHeight + spacing)
+            let frame = CGRect.init(x: xValue, y: 0, width: itemWidth, height: itemHeight)
             attribute.setAttributesValues(scaleValue: scaleValue, frame: frame)
-            xValue +=  itemWidth
+            xValue += spacing + itemWidth
             attributes.append(attribute)
         }
         
@@ -51,6 +50,7 @@ class JobsCollectionViewlayout : UICollectionViewFlowLayout {
     }
      func configCollectionViewForFirstLoad(){
         collectionView!.decelerationRate = .fast
+        
         collectionView!.isPagingEnabled = true
 //        collectionView!.setContentOffset(.init(x:attributes[1].center.x , y:0), animated: false )
     }
@@ -58,7 +58,7 @@ class JobsCollectionViewlayout : UICollectionViewFlowLayout {
    private  func getScaleValue( index : Int)->CGFloat{
         let offestPerItem = itemWidth
         let currentItemOffset =  CGFloat(index) * offestPerItem
-    let centerOfViewOffset = collectionView!.contentOffset.x + (collectionView!.bounds.width/2) - (offestPerItem / 2)
+    let centerOfViewOffset = collectionView!.contentOffset.x + (collectionView!.bounds.width/2) - (itemWidth / 2)
         let currentRatio =  abs(centerOfViewOffset - currentItemOffset) / 1000
     if index == 1 {
         print(currentRatio)
@@ -78,11 +78,4 @@ class JobsCollectionViewlayout : UICollectionViewFlowLayout {
     
     
    
-}
-
-extension UICollectionViewLayoutAttributes {
-    func setAttributesValues(scaleValue : CGFloat , frame : CGRect){
-        self.frame = frame
-        self.transform = .init(scaleX: scaleValue, y: scaleValue)
-    }
 }
